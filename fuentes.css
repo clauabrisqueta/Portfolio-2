@@ -1,0 +1,33 @@
+@font-face{
+    font-family:traffic1;
+    src:url(fuentes/traffic1_0.ttf);
+}
+
+@font-face{
+    font-family:traffic2;
+    src:url(fuentes/traffic2_0.ttf);
+}
+
+@font-face{
+    font-family:traffic3;
+    src:url(fuentes/traffic3.ttf);
+}
+
+@font-face{
+    font-family:traffic4;
+    src:url(fuentes/traffic4.ttf);
+}
+
+@font-face{
+    font-family:traffic5;
+    src:url(fuentes/traffic5.ttf);
+}
+
+@font-face{
+    font-family:traffic1;
+    src:url(fuentes/traffic6.ttf);
+}
+
+h1{
+    font-family:traffic5;
+}

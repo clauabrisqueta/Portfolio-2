@@ -1,0 +1,965 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+    background: linear-gradient(0deg, rgba(143,160,190,1) 0%, rgba(194,206,233,1) 49%, rgba(143,160,190,1) 100%); 
+    overflow: overlay; /*Para hacer fondo del scrollbar transparente*/
+    background-attachment: fixed;
+}
+
+/* Diseño del scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+    /* fondo del scrollbar*/
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+    /* color del scrollbar*/
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+    /* color del scrollbar al poner ratón sobre él*/
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+/* estilo barra navegación */
+nav{
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'traffic5', sans-serif; /*fuente alternativa*/
+}
+nav.sticky{
+  background: #4070f4;
+  padding: 13px 0;
+}
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+/*CA.*/
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: whitesmoke;
+}
+nav.sticky .navbar .logo a{
+  color: #fff;
+}
+
+                                    /*Menu de navegación*/
+
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 28px; /*margen entre apartados*/
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: whitesmoke;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color: #404A5D;
+}
+nav.sticky .menu a{
+  color: #FFF;
+}
+nav.sticky .menu a:hover{
+  color: #404A5D;
+}
+.navbar .media-icons a{
+  color: whitesmoke;
+  font-size: 20px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a{
+  color: #404A5D;
+}
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #4070f4;
+}
+nav.sticky .menu-btn{
+  color: #FFF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
+
+/*inicio*/
+
+.imagen img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+section{
+  padding-top: 80px;
+}
+section .content{
+  width: 80%;
+  margin: 10px auto;
+  font-family: 'traffic5', sans-serif;
+}
+.sobremi .about-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title{
+  display: flex;
+  justify-content: center;
+    margin-top: 40px;
+}
+section .title span{
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sobremi .about-details .left{
+  width: 35%;
+}
+.sobremi .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.about-details .right{
+  width: 65%;
+}
+section  .topic{ /*titulo claudia abrisqueta*/
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.about-details .right p{ /*descripión*/
+  text-align: justify;
+  color: whitesmoke;
+}
+section .button{
+  margin: 16px 0;
+}
+section .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: whitesmoke;
+  color: #404A5D;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover{
+  border-color: transparent;
+  background-color: #404A5D;
+  color: whitesmoke;
+}
+a{
+    color: #404A5D;
+}
+a:hover{
+
+  color: whitesmoke;
+    
+}
+
+                                /*DETALLES LATERAL IZQUIERDO */
+
+section .detallessobremi{
+    width: 30%;
+    margin: 40px auto; /*distancia a imagen*/
+    margin-bottom: 60px;
+    color: whitesmoke;
+    font-family: 'traffic5', sans-serif;
+    float: left;
+}
+.idiomas {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.disponibilidad{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+                                /*EDUCACION LATERAL DERECHO */
+
+section .Info{
+    width: 65%;
+    margin: 40px auto;
+    margin-bottom: 60px;
+    color: whitesmoke;
+    font-family: 'traffic5', sans-serif;
+    float: right;
+}
+.educacion{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.izquierda{
+    width: 20%;
+    float: left;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.derecha{
+    width: 80%;
+    float: right;
+    margin-bottom: 20px;
+    content: justify;
+}
+.experiencia{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 130px;
+}
+                                    /* HABILIDADES */
+
+section .habilidades{
+    width: 80%;
+    margin: 10px auto;
+    margin-bottom: 60px;
+    color: whitesmoke;
+    font-family: 'traffic5', sans-serif;
+    position: relative;
+    margin-top: 450px;
+
+}
+    
+.habilidades .detallesprogramas{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+                            /*Habilidades lateral izquierdo*/
+
+.detallesprogramas .left{
+    width: 45%;
+}
+
+.habilidades li{
+    margin: 20px 0; /*Margen entre puntos*/
+    list-style: none; /*Quitar puntos de la lista*/
+}
+
+.bar{
+    margin-top: 20px;
+    background: whitesmoke; /*interior barra*/
+    display: block;
+    height: 8px;
+    border: 1px solid rgba (0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px whitesmoke; /*bruma blanca*/
+}
+.bar span{
+    height: 8px;
+    float: left;
+    background: #2187e7;
+}
+.rhinoceros{
+    width: 90%;
+    animation: rhinoceros 2s;
+}
+.solidworks{
+    width: 70%;
+    animation: solidworks 2s;
+}
+.keyshot{
+    width: 90%;
+    animation: keyshot 2s;
+}
+.figma{
+    width: 70%;
+    animation: figma 2s;
+}
+@keyframes rhinoceros{
+    0%{
+        width: 0%;
+    }
+    100%: 90%;
+}
+@keyframes solidworks{
+    0%{
+        width: 0%;
+    }
+    100%: 70%;
+}
+@keyframes keyshot{
+    0%{
+        width: 0%;
+    }
+    100%: 90%;
+}
+@keyframes figma{
+    0%{
+        width: 0%;
+    }
+    100%: 70%;
+}
+
+                            /*habildiades lateral derecho */
+
+.detallesprogramas .right{
+    width: 45%;
+}
+.habilidades li{
+    margin: 20px 0;
+}
+
+.bar{
+    margin-top: 20px;
+    background: whitesmoke; /*interior barra*/
+    display: block;
+    height: 8px;
+    border: 1px solid rgba (0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px whitesmoke; /*bruma blanca*/
+}
+.bar span{
+    height: 8px;
+    float: left;
+    background: #2187e7;
+}
+.illustrator{
+    width: 90%;
+    animation: rhinoceros 2s;
+}
+.photoshop{
+    width: 70%;
+    animation: solidworks 2s;
+}
+.autocad{
+    width: 90%;
+    animation: keyshot 2s;
+}
+.indesign{
+    width: 70%;
+    animation: figma 2s;
+}
+@keyframes illustrator{
+    0%{
+        width: 0%;
+    }
+    100%: 90%;
+}
+@keyframes photoshop{
+    0%{
+        width: 0%;
+    }
+    100%: 70%;
+}
+@keyframes autocad{
+    0%{
+        width: 0%;
+    }
+    100%: 90%;
+}
+@keyframes indesign{
+    0%{
+        width: 0%;
+    }
+    100%: 70%;
+}
+
+
+                                /* MIS PROYECTOS */
+/* SEGUIR ELABORANDO CAJA 1 Y 2. PREVIEW LATERAL DE LOS PROYECTOS */
+/*.proyectos .caja1{
+    width: 33%;
+    height: 600px;
+    float: left;
+    background: red;
+    margin: 0;
+    padding: 0;
+}
+.proyectos .caja2{
+    width: 33%;
+    height: 600px;
+    float: right;
+    background: red;
+    margin: 0;
+    padding: 0;
+}*/
+ .proyectos .proyectos-detalles{
+   display: center;
+   justify-content: space-between;
+   align-items: center;
+    width: 100%; /*si no 33% para prueba fotos animadas*/
+     height: 600px;
+  /*   float: right;*/
+     
+ }
+
+ .proyectos-detalles .text{
+    width: 100%;
+    list-style: none;
+    margin-top: 40px;
+ }
+ .proyectos-detalles p{
+   color: whitesmoke;
+   text-align: center;
+     margin: 60px;
+     font-size: 20px;
+     transition: all 500ms; /*velocidad de transición*/
+ }
+.proyectos-detalles p:hover{ /*efecto ampliar texto*/
+    font-size: 40px;
+    font-size-adjust: 20px;
+    
+}
+
+                                    /*UMILES NEXT*/
+
+.umilesnext .title{
+    font-family: 'traffic5', sans-serif;
+}
+.umilesnext .img-umilesnext{
+    width: 80%;
+    height: 800px;
+    justify-content: center;
+    background: red;
+    margin: auto;
+    margin-top: 30px;
+}
+.umilesnext .info{
+    font-family: 'traffic5';
+    color: whitesmoke;
+    margin: auto;
+    width: 80%;
+    background: red;
+    margin-top: 30px;
+    height: 200px;
+}
+.img-umilesnext img {
+    width: 100%;
+    height: 100%;
+}
+
+                                    /*ALESSI*/
+
+/*.alessifarm .title{
+    font-family: 'traffic5', sans-serif;
+}
+
+.alessifarm .img-alessifarm{
+    width: 50%;
+    height: 700px;
+    justify-content: center;
+    background: red;
+    margin-top: 30px;
+    float: right;
+    30px;margin-right: 200px;
+}
+.alessifarm .info{
+    font-family: 'traffic5';
+    color: whitesmoke;
+    margin: auto;
+    width: 20%;
+    background: red;
+    margin-top: 30px;
+    height: 200px;
+    float: left;
+    margin-left: 200px;
+
+}
+
+.img-alessifarm img {
+    width: 100%;
+    height: 700px;
+    object-fit:cover;
+}
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+:root {
+   --card-width: 200px;
+   --card-height: 300px;
+   --card-transition-duration: 800ms;
+   --card-transition-easing: ease;
+}
+
+
+ button {
+   border: none;
+   background: none;
+   cursor: pointer;
+}
+ button:focus {
+   outline: none;
+   border: none;
+}
+ .app {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+ .app__bg {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: -5;
+   filter: blur(8px);
+   pointer-events: none;
+   user-select: none;
+   overflow: hidden;
+     opacity: 0;
+}
+ 
+ .cardList {
+   position: absolute;
+   width: calc(3 * var(--card-width));
+   height: auto;
+     margin-top: 1000px;
+}
+ .cardList__btn {
+   --btn-size: 35px;
+   width: var(--btn-size);
+   height: var(--btn-size);
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 100;
+}
+ .cardList__btn.btn--left {
+   left: -5%;
+}
+ .cardList__btn.btn--right {
+   right: -5%;
+}
+ .cardList__btn .icon {
+   width: 100%;
+   height: 100%;
+}
+ .cardList__btn .icon svg {
+   width: 100%;
+   height: 100%;
+}
+ .cardList .cards__wrapper {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   perspective: 1000px;
+}
+ .card {
+   --card-translateY-offset: 50vh;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+   display: inline-block;
+   width: var(--card-width);
+   height: var(--card-height);
+   transition: transform var(--card-transition-duration) var(--card-transition-easing);
+   user-select: none;
+
+}
+ .card::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: #000;
+   z-index: 1;
+   transition: opacity var(--card-transition-duration) var(--card-transition-easing);
+   opacity: calc(1 - var(--opacity));
+}
+ .card__image {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+ .card__image img {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+ .card.current--card {
+   --current-card-rotation-offset: 0;
+   --card-translateX-offset: 0;
+   --card-rotation-offset: var(--current-card-rotation-offset);
+   --card-scale-offset: 1.2;
+   --opacity: 0.8;
+}
+ .card.previous--card {
+   --card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
+   --card-rotation-offset: 25deg;
+}
+ .card.next--card {
+   --card-translateX-offset: calc(var(--card-width) * 1.1);
+   --card-rotation-offset: -25deg;
+}
+ .card.previous--card, .card.next--card {
+   --card-scale-offset: 0.9;
+   --opacity: 0.4;
+}
+ .infoList {
+   position: absolute;
+   width: calc(3 * var(--card-width));
+   height: var(--card-height);
+   pointer-events: none;
+     margin-top: 60%;
+}
+ .infoList .info__wrapper {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-end;
+   perspective: 1000px;
+   transform-style: preserve-3d;
+}
+ .info {
+   margin-bottom: calc(var(--card-height) / 8);
+   margin-left: calc(var(--card-width) / 1.5);
+   transform: translateZ(2rem);
+   transition: transform var(--card-transition-duration) var(--card-transition-easing);
+}
+ .info .text {
+   position: relative;
+   font-family: "Montserrat";
+   font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
+   white-space: nowrap;
+   color: #fff;
+   width: fit-content;
+}
+ .info .name, .info .location {
+   text-transform: uppercase;
+}
+ .info .location {
+   font-weight: 800;
+}
+ .info .location {
+   --mg-left: 40px;
+   --text-size-offset: 0.12;
+   font-weight: 600;
+   margin-left: var(--mg-left);
+   margin-bottom: calc(var(--mg-left) / 2);
+   padding-bottom: 0.8rem;
+}
+ .info .location::before, .info .location::after {
+   content: "";
+   position: absolute;
+   background: #fff;
+   left: 0%;
+   transform: translate(calc(-1 * var(--mg-left)), -50%);
+}
+ .info .location::before {
+   top: 50%;
+   width: 20px;
+   height: 5px;
+}
+ .info .location::after {
+   bottom: 0;
+   width: 60px;
+   height: 2px;
+}
+ .info .description {
+   --text-size-offset: 0.065;
+   font-weight: 500;
+}
+ .info.current--info {
+   opacity: 1;
+   display: block;
+}
+ .info.previous--info, .info.next--info {
+   opacity: 0;
+   display: none;
+}
+ 
+ @media only screen and (min-width: 800px) {
+   :root {
+     --card-width: 250px;
+     --card-height: 400px;
+  }
+}
+ .support {
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   padding: 10px;
+   display: flex;
+}
+ .support a {
+   margin: 0 10px;
+   color: #fff;
+   font-size: 1.8rem;
+   backface-visibility: hidden;
+   transition: all 150ms ease;
+}
+ .support a:hover {
+   transform: scale(1.1);
+}
+.textodescriptivo { /*DESCRIPCION*/
+    width: 50%;
+    height: 400px;
+    margin-top: 800px;
+    text-align: justify;
+    margin-left: 25%;
+    font-family: 'Montserrat';
+    color: whitesmoke;
+
+}
+                             /* My Services CSS */
+.services .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover{
+  background: #4070f4;
+  color: #fff;
+}
+.services .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #4070f4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background-color: #fff;
+  color: #4070f4;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #fff;
+}
+
+                                    /* CONTÁCTAME */
+
+.contact .content{
+  padding: 30px 0;
+    font-size: 40px;
+}
+.contact .topic{
+    font-size: 20px;
+}
+.contact .text{
+  width: 60%;
+  text-align: center;
+  margin: auto;
+    color: whitesmoke;
+    margin-top: 50px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+
+/* Scroll TO Top Button CSS */
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #4070f4;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color: #4070f4;
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+  }
+  .home .text-two{
+    font-size: 65px;
+  }
+  .home .text-three{
+    font-size: 35px;
+  }
+  .skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text{
+    width: 100%;
+}
+}
+
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #4070f4;
+  }
+}
+
